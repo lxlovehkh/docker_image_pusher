@@ -27,3 +27,5 @@ docker.elastic.co/logstash/logstash:7.10.2
 docker.elastic.co/kibana/kibana:7.10.2
 docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 h2non/imaginary:latest
+mongo:6
+ghcr.io/wekan/wekan:latest
