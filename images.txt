@@ -29,3 +29,4 @@ docker.elastic.co/elasticsearch/elasticsearch:7.10.2
 h2non/imaginary:latest
 mongo:6
 ghcr.io/wekan/wekan:latest
+rustdesk/rustdesk-server:latest
