@@ -30,3 +30,4 @@ h2non/imaginary:latest
 mongo:6
 ghcr.io/wekan/wekan:latest
 rustdesk/rustdesk-server:latest
+apereo/cas:7.0.4.1
