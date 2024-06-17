@@ -31,3 +31,4 @@ mongo:6
 ghcr.io/wekan/wekan:latest
 rustdesk/rustdesk-server:latest
 apereo/cas:7.0.4.1
+apereo/cas-initializr:0.0.82
