@@ -18,6 +18,7 @@ redis:7.2.0
 mysql:8.1
 gcr.io/cadvisor/cadvisor:v0.47.2
 nacos/nacos-server:v2.2.3
+nacos/nacos-server:v2.3.2
 rabbitmq:3.12-management
 xuxueli/xxl-job-admin:2.4.0
 sonatype/nexus3:latest
