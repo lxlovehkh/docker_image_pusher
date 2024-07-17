@@ -10,12 +10,16 @@ prom/node-exporter:v1.7.0
 quay.io/prometheuscommunity/postgres-exporter:v0.15.0
 influxdb:2.7.3
 quay.io/minio/minio:latest
+quay.io/minio/minio:RELEASE.2023-12-20T01-00-02Z
 nginx:1.25
 docker.elastic.co/elasticsearch/elasticsearch:8.10.2
+docker.elastic.co/elasticsearch/elasticsearch:8.11.3
 postgres:15.4
 prom/alertmanager:v0.26.0
 redis:7.2.0
+redis:7.2.4
 mysql:8.1
+mysql:5.7.18
 gcr.io/cadvisor/cadvisor:v0.47.2
 nacos/nacos-server:v2.2.3
 nacos/nacos-server:v2.3.2
@@ -34,3 +38,4 @@ rustdesk/rustdesk-server:latest
 apereo/cas:7.0.4.1
 apereo/cas-initializr:0.0.84
 azul/zulu-openjdk:21
+swr.cn-north-4.myhuaweicloud.com/infiniflow/ragflow:dev
