@@ -1,1 +1,2 @@
-apereo/cas-initializr:0.0.82
+nginx:1.27.1
+mysql:8.4.2
