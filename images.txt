@@ -1,1 +1,1 @@
-mysql:lts-oraclelinux8
+mysql:8.4.1
