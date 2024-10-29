@@ -1,1 +1,1 @@
-mikesplain/openvas
+nacos-server:2.4.3
