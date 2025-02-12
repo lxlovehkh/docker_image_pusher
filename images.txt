@@ -1,1 +1,1 @@
-ollama/ollama
+alpine:3.15
