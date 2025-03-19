@@ -1,1 +1,4 @@
-mouday/domain-admin:v1.6.64
+node:22-slim
+golang:1.24
+rust:1-slim
+bitnami/redis:7.2.5
