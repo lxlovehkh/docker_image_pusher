@@ -1,1 +1,7 @@
-timberio/vector:0.45.0-debian
+milvusdb/milvus-env:ubuntu22.04-20250120-cb959cd
+milvusdb/milvus-env:gpu-ubuntu22.04-20240806-d8668fe
+milvusdb/etcd:3.5.5-r2
+apachepulsar/pulsar:2.8.2
+minio/minio:RELEASE.2023-03-20T20-16-18Z
+mcr.microsoft.com/azure-storage/azurite
+fsouza/fake-gcs-server
