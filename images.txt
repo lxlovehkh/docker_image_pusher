@@ -1,1 +1,1 @@
-mouday/domain-admin:latest
+mindsdb/mindsdb
