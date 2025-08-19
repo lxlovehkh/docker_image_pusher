@@ -1,4 +1,4 @@
-maxkey-frontend:latest
-maxkey:latest
-maxkey-mgt-frontend:latest
-maxkey-mgt:latest
+maxkeytop/maxkey-frontend:latest
+maxkeytop/maxkey:latest
+maxkeytop/maxkey-mgt-frontend:latest
+maxkeytop/maxkey-mgt:latest
