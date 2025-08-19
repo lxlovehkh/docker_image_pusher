@@ -1,1 +1,4 @@
-quay.io/keycloak/keycloak:26.3.2
+maxkey-frontend:latest
+maxkey:latest
+maxkey-mgt-frontend:latest
+maxkey-mgt:latest
