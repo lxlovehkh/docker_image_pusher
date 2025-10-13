@@ -1,2 +1,2 @@
-jenkins-docker
+docker:dind
 jenkins/jenkins:lts
