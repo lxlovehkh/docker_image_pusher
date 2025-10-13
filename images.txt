@@ -1,1 +1,2 @@
-sonatype/nexus3
+jenkins-docker
+jenkins/jenkins:lts
