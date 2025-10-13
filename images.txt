@@ -1,4 +1,1 @@
-maxkeytop/maxkey-frontend:latest
-maxkeytop/maxkey:latest
-maxkeytop/maxkey-mgt-frontend:latest
-maxkeytop/maxkey-mgt:latest
+sonatype/nexus3
