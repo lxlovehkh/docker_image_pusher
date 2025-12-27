@@ -1,9 +1,1 @@
-rancher/rancher:v2.8.5
-rancher/klipper-helm:v0.8.2-build20230815
-rancher/klipper-lb:v0.4.5
-rancher/mirrored-pause:3.6
-rancher/shell:v0.1.22
-rancher/fleet:v0.9.4
-rancher/fleet-agent:v0.9.4
-rancher/gitjob:v0.3.1
-rancher/rancher-webhook:v0.4.4
+crawlabteam/crawlab:latest
