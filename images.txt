@@ -1,3 +1,2 @@
-langgenius/dify-llm-apps:1.10.1-fix.1
 langgenius/dify-plugin-daemon:1.10.1-fix.1
 milvusdb/milvus:v2.5.15
