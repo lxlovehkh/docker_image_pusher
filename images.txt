@@ -1,2 +1,10 @@
-langgenius/dify-plugin-daemon:0.4.1-local
-milvusdb/milvus:v2.5.15
+infiniflow/infinity:v0.7.0-dev7
+infiniflow/ragflow:v0.25.4
+oceanbase/oceanbase-ce:4.4.1.0-100000032025101610
+oceanbase/seekdb:latest
+pgsty/minio:RELEASE.2026-03-25T00-00-00Z
+infiniflow/text-embeddings-inference:cpu-1.8
+infiniflow/text-embeddings-inference:1.8
+kibana:8.11.3
+elasticsearch:8.11.3
+infiniflow/sandbox-executor-manager:latest
