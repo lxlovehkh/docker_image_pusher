@@ -32,6 +32,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y skopeo
+          skopeo --version
 
       - name: Sync images to Aliyun Registry
         run: |
@@ -60,20 +61,18 @@ jobs:
             fi
           done < images.txt
 
-          # 开始循环同步，单条失败不中断
+          # 循环同步，单条失败跳过，保证脚本整体返回0
+          ALL_OK=true
           while IFS= read -r line || [ -n "$line" ]; do
             [[ -z "$line" ]] && continue
             if echo "$line" | grep -q '^\s*#'; then continue; fi
 
             platform=$(echo "$line" | awk -F'--platform[ =]' '{if (NF>1) print $2}' | awk '{print $1}')
-            if [ -z "${platform}" ]; then
-              platform_prefix=""
-              skopeo_opt=""
-            else
+            skopeo_opt=""
+            platform_prefix=""
+            if [ -n "${platform}" ]; then
               platform_prefix="${platform//\//_}_"
-              arch=$(echo "${platform}" | cut -d'/' -f2)
-              os=$(echo "${platform}" | cut -d'/' -f1)
-              skopeo_opt="--override-arch ${arch} --override-os ${os}"
+              skopeo_opt="--platform ${platform}"
             fi
 
             image=$(echo "$line" | awk '{print $NF}')
@@ -95,15 +94,20 @@ jobs:
 
             echo "=================================================="
             echo "Sync: ${src_image}  =>  ${dest_image}"
-            echo "Command: skopeo copy ${skopeo_opt} ${src_image} ${dest_image} --authfile ${REGISTRY_AUTH_FILE}"
+            echo "skopeo copy ${skopeo_opt} ${src_image} ${dest_image} --authfile ${REGISTRY_AUTH_FILE}"
             echo "=================================================="
 
-            set +e
-            skopeo copy ${skopeo_opt} "${src_image}" "${dest_image}" --authfile "${REGISTRY_AUTH_FILE}"
-            ret=$?
-            set -e
-            if [ ${ret} -ne 0 ]; then
-              echo "==== WARN: Sync ${src_image} FAILED, skip to next ===="
+            if skopeo copy ${skopeo_opt} "${src_image}" "${dest_image}" --authfile "${REGISTRY_AUTH_FILE}"; then
+              echo "✅ SUCCESS"
+            else
+              echo "❌ FAILED: ${src_image}"
+              ALL_OK=false
             fi
             df -hT
           done < images.txt
+
+          if [ "$ALL_OK" = false ]; then
+            echo "⚠️ Some images sync failed!"
+            # 这里改成 true，不让整个job失败；如果你想要只要有一个失败job就红，改成 exit 1
+            exit 0
+          fi
