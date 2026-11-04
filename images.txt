@@ -1,1 +1,1 @@
-calciumion/new-api:latest
+ghcr.io/hkuds/deeptutor:latest
