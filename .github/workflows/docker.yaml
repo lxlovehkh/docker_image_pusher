@@ -37,7 +37,12 @@ jobs:
       - name: Sync images to Aliyun Registry
         run: |
           export REGISTRY_AUTH_FILE=$(mktemp)
-          skopeo login --authfile "$REGISTRY_AUTH_FILE" -u "${ALIYUN_REGISTRY_USER}" -p "${ALIYUN_REGISTRY_PASSWORD}" "${ALIYUN_REGISTRY}"
+          # 手动构造 skopeo auth json，抛弃 skopeo login（这个是本次报错元凶）
+          AUTH_STR=$(echo -n "${ALIYUN_REGISTRY_USER}:${ALIYUN_REGISTRY_PASSWORD}" | base64 -w0)
+          cat > "${REGISTRY_AUTH_FILE}" <<EOF
+          {"auths":{"${ALIYUN_REGISTRY}":{"auth":"${AUTH_STR}"}}}
+          EOF
+          cat "${REGISTRY_AUTH_FILE}"
 
           # 预处理：检测重名镜像
           declare -A duplicate_images
