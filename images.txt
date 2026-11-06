@@ -1,2 +1,11 @@
-docker.1panel.live/library/postgres:16
-docker.1panel.live/docker/dockerfile:1
+python:3.11-slim
+python:3.11-alpine
+node:20-alpine
+redis:7.4-alpine
+ghcr.io/learnhouse/app:1.5.1
+pgvector/pgvector:pg16
+redis:7.2.3-alpine
+nginx:alpine
+alpine/socat:1.8.0.0
+lfnovo/open_notebook:v1-latest
+surrealdb/surrealdb:v2
