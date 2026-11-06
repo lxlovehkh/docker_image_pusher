@@ -1,1 +1,2 @@
-docker.1panel.live/library/node:22-alpine
+docker.1panel.live/library/postgres:16
+docker.1panel.live/docker/dockerfile:1
