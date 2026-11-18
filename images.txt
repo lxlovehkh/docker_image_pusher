@@ -10,3 +10,4 @@ redis:6-alpine
 nginx:latest
 ubuntu/squid:latest
 cr.weaviate.io/semitechnologies/weaviate:1.39.13
+
