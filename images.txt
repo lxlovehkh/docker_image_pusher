@@ -5,9 +5,6 @@ ghcr.io/langgenius/dify-sandbox:0.2.15
 ghcr.io/langgenius/dify-plugin-daemon:0.6.10-local
 ghcr.io/langgenius/dify-agent-backend:latest
 ghcr.io/langgenius/dify-agent-local-sandbox:latest
-postgres:15-alpine
-redis:6-alpine
 nginx:latest
-ubuntu/squid:latest
 cr.weaviate.io/semitechnologies/weaviate:1.39.13
 
